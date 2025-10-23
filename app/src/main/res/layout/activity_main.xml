@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <com.tropicalcoder.autocord.CanvasView
+        android:id="@+id/signature_canvas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <LinearLayout
+        android:id="@+id/linlay0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linlay1"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/labelPeakFreq"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/peakFreq"
+            app:layout_constraintStart_toStartOf="@+id/peakFreq"
+            app:layout_constraintHorizontal_bias="0.25"
+            android:padding="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:text="@string/peak_freq"
+            android:textAlignment="center"
+            android:clickable="false"
+            android:background="?attr/colorPrimaryDark"
+            android:textColor="@color/colorTealAccent2" />
+
+        <TextView
+            android:id="@+id/labelPeakDB"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/peakDB"
+            app:layout_constraintStart_toStartOf="@+id/peakDB"
+            app:layout_constraintHorizontal_bias="0.50"
+            android:padding="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:text="@string/peak_db"
+            android:textAlignment="center"
+            android:clickable="false"
+            android:background="?attr/colorPrimaryDark"
+            android:textColor="@color/colorTealAccent2" />
+
+        <TextView
+            android:id="@+id/labelMusicalNote"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/musicalNote"
+            app:layout_constraintStart_toStartOf="@+id/musicalNote"
+            app:layout_constraintHorizontal_bias="0.75"
+            android:padding="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:text="@string/note_val"
+            android:textAlignment="center"
+            android:clickable="false"
+            android:background="?attr/colorPrimaryDark"
+            android:textColor="@color/colorTealAccent2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linlay2"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/peakFreq"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/labelRecordtime"
+            app:layout_constraintStart_toStartOf="@+id/labelRecordtime"
+            app:layout_constraintHorizontal_bias="0.25"
+            android:padding="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:text="@string/_0_hz"
+            android:clickable="false"
+            android:background="?attr/colorPrimaryDark"
+            android:textColor="@color/colorTealAccent2" />
+
+
+        <TextView
+            android:id="@+id/peakDB"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/labelRecordkb"
+            app:layout_constraintStart_toStartOf="@+id/labelRecordkb"
+            app:layout_constraintHorizontal_bias="0.50"
+            android:padding="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:text="@string/_0_db"
+            android:clickable="false"
+            android:background="?attr/colorPrimaryDark"
+            android:textColor="@color/colorTealAccent2" />
+
+
+        <TextView
+            android:id="@+id/musicalNote"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/labelGainApplied"
+            app:layout_constraintStart_toStartOf="@+id/labelGainApplied"
+            app:layout_constraintHorizontal_bias="0.75"
+            android:padding="8dp"
+            android:autoSizeMaxTextSize="32sp"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeTextType="uniform"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:clickable="false"
+            android:background="?attr/colorPrimaryDark"
+            android:textColor="@color/colorTealAccent2" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linlay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linlay3"
+        android:layout_centerInParent="true">
+
+    <TextView
+        android:id="@+id/labelRecordtime"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/recordtime"
+        app:layout_constraintStart_toStartOf="@+id/recordtime"
+        app:layout_constraintHorizontal_bias="0.25"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/duration"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+
+    <TextView
+        android:id="@+id/labelRecordkb"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/recordkb"
+        app:layout_constraintStart_toStartOf="@+id/recordkb"
+        app:layout_constraintHorizontal_bias="0.50"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/fileoffset"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+
+    <TextView
+        android:id="@+id/labelGainApplied"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/gainApplied"
+        app:layout_constraintStart_toStartOf="@+id/gainApplied"
+        app:layout_constraintHorizontal_bias="0.75"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/inputlevel"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linlay3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/radioModes"
+        android:layout_centerInParent="true">
+
+    <TextView
+        android:id="@+id/recordtime"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/radioModes"
+        app:layout_constraintEnd_toStartOf="@+id/recordkb"
+        app:layout_constraintHorizontal_bias="0.25"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/text_initialtime"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+
+
+    <TextView
+        android:id="@+id/recordkb"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/radioModes"
+        app:layout_constraintStart_toEndOf="@+id/recordtime"
+        app:layout_constraintHorizontal_bias="0.50"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/text_initialkb"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+
+
+    <TextView
+        android:id="@+id/gainApplied"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/radioModes"
+        app:layout_constraintStart_toEndOf="@+id/recordkb"
+        app:layout_constraintHorizontal_bias="0.75"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/_0_db"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelCurrentMode"
+        android:layout_width="366dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="@+id/radioModes"
+        app:layout_constraintStart_toStartOf="@+id/radioModes"
+        app:layout_constraintEnd_toEndOf="@+id/radioModes"
+        app:layout_constraintBottom_toBottomOf="@+id/radioModes"
+        app:layout_constraintHorizontal_bias="0.50"
+        android:padding="8dp"
+        android:autoSizeMaxTextSize="48sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:maxLines="1"
+        android:text="@string/monitoring"
+        android:textAlignment="center"
+        android:clickable="false"
+        android:background="?attr/colorPrimaryDark"
+        android:textColor="@color/colorTealAccent2" />
+
+    <RadioGroup
+        android:id="@+id/radioModes"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/progressPlay" >
+
+            <RadioButton
+                android:id="@+id/radioMonitor"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="32sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeTextType="uniform"
+                android:background="?attr/colorPrimaryDark"
+                android:checked="true"
+                android:maxLines="1"
+                android:onClick="onModeRadioButtonClicked"
+                android:padding="8dp"
+                android:text="@string/radio_monitor"
+                android:textColor="@color/colorTealAccent2" />
+
+            <RadioButton
+                android:id="@+id/radioRecord"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="32sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeTextType="uniform"
+                android:background="?attr/colorPrimaryDark"
+                android:maxLines="1"
+                android:onClick="onModeRadioButtonClicked"
+                android:padding="8dp"
+                android:text="@string/radio_record"
+                android:textColor="@color/colorTealAccent2" />
+
+            <RadioButton
+                android:id="@+id/radioPlay"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:autoSizeMaxTextSize="32sp"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeTextType="uniform"
+                android:background="?attr/colorPrimaryDark"
+                android:maxLines="1"
+                android:onClick="onModeRadioButtonClicked"
+                android:padding="8dp"
+                android:text="@string/radio_play"
+                android:textColor="@color/colorTealAccent2" />
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/progressPlay"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:progress="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageBtnPopup" >
+    </ProgressBar>
+
+    <ImageButton
+        android:id="@+id/imageBtnPopup"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_settings_black"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onClickBtnPopup"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:gravity="bottom"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/setup" />
+
+    <ImageButton
+        android:id="@+id/imageBtnInfo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_info"
+        android:visibility="invisible"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onClickBtnInfo"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:gravity="bottom"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/option_show_info" />
+
+
+    <ImageButton
+        android:id="@+id/imageBtnStart"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_start"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onClickBtnToggle"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.4"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/start" />
+
+    <ImageButton
+        android:id="@+id/imageBtnStop"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_stop_black"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onClickBtnToggle"
+        android:visibility="invisible"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.4"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/Stop" />
+
+    <ImageButton
+        android:id="@+id/imageBtnPause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_pause"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onTogglePause"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/pause" />
+
+    <ImageButton
+        android:id="@+id/imageBtnUnPause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_pause_circle_filled_black"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onTogglePause"
+        android:visibility="invisible"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/unpause" />
+
+    <ImageButton
+        android:id="@+id/imageBtnExport"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:autoSizeMaxTextSize="32sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:src="@drawable/ic_file_copy"
+        android:background="@drawable/ic_round_background"
+        android:tint="?attr/colorAccent"
+        android:padding="4dp"
+        android:scaleType="fitCenter"
+        android:elevation="3dp"
+        android:onClick="onExportFile"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintHorizontal_bias="0.8"
+        android:gravity="bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/export" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

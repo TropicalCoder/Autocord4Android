@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTealPrimary">#444444</color>
+    <color name="colorTealPrimaryDark">#444444</color>
+    <color name="colorTealAccent">#80cbc4</color>
+    <color name="colorTealAccent2">#C1FCF6</color>
+    <color name="colorVUMeter">#90EE90</color>
+    <color name="colorProgress">#FFBE00</color>
+</resources>
