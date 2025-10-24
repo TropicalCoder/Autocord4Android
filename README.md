@@ -12,7 +12,7 @@ Feel free to fork it, modernize it, or adapt it for your own purposes.
 
 ## Features
 
-- Noise and frequency triggered recording with smart thresholds
+- Level and frequency triggered recording with smart thresholds
 - Adjustable sensitivity and trigger delay
 - Experimental support for phone call recording (older Android only)
 - Native audio processing via C++
@@ -40,7 +40,7 @@ To build:
 
 ## License
 
-This project is licensed under the [Apache License 2.0](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ### Patent Notice
 
