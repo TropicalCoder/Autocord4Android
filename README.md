@@ -58,4 +58,4 @@ George W. Taylor
 
 This project is open source under the [MIT License](LICENSE).
 
-© 2025 George W. Taylor. All rights reserved.
+© 2025 George W. Taylor. All rights reserved."" 
